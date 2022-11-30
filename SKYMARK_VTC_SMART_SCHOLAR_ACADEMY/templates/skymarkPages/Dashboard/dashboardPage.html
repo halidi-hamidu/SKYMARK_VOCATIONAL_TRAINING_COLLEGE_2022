@@ -237,10 +237,10 @@
               <div class="row align-items-center">
                 <div class="col mr-2">
                   <div class="text-xs font-weight-bold text-uppercase mb-1"> Present</div>
-                    {% if count_all_student_present_today == 0 %}
+                    {% if count_all_student_present_today_specific_class == 0 %}
                     <div class="h5 mb-0 font-weight-bold text-gray-800">-</div>
                     {% else %}
-                    <div class="h5 mb-0 font-weight-bold text-gray-800">{{count_all_student_present_today}}</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">{{count_all_student_present_today_specific_class}}</div>
 
                     {% endif %}
                   <!-- <div class="mt-2 mb-0 text-muted text-xs">
@@ -261,10 +261,10 @@
               <div class="row align-items-center">
                 <div class="col mr-2">
                   <div class="text-xs font-weight-bold text-uppercase mb-1"> Absents</div>
-                  {% if count_all_student_absent_today == 0 %}
+                  {% if count_all_student_absent_today_specific_class == 0 %}
                   <div class="h5 mb-0 font-weight-bold text-gray-800">-</div>
                   {% else %}
-                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{count_all_student_absent_today}}</div>
+                  <div class="h5 mb-0 font-weight-bold text-gray-800">{{count_all_student_absent_today_specific_class}}</div>
 
                   {% endif %}
                   <!-- <div class="mt-2 mb-0 text-muted text-xs">

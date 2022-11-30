@@ -117,9 +117,14 @@ def dashboardPage(request):
     count_all_staff = ManageStaffDetails.objects.all().count()
     count_all_courses = ManageCourses.objects.all().count()
     today_date = datetime.datetime.today().date()
+    curent_login_user_its_course = get_staff.class_name
     count_all_student_present_today = ManageStudentSAttendance.objects.filter(
-        date=today_date, attendance_status=True
-    ).count()
+        date=today_date, attendance_status=True).count()
+    count_all_student_present_today_specific_class = ManageStudentSAttendance.objects.filter(
+        date=today_date, attendance_status=True, course_name=curent_login_user_its_course).count()
+
+    count_all_student_absent_today_specific_class = ManageStudentSAttendance.objects.filter(
+        date=today_date, attendance_status=False, course_name=curent_login_user_its_course).count()
 
     count_all_student_absent_today = ManageStudentSAttendance.objects.filter(
         date=today_date, attendance_status=False
@@ -148,6 +153,8 @@ def dashboardPage(request):
         'get_staff_permision': get_staff_permision,
         'get_present_student_by_its_course': get_present_student_by_its_course,
         'get_absent_student_by_its_course': get_absent_student_by_its_course,
+        'count_all_student_present_today_specific_class': count_all_student_present_today_specific_class,
+        'count_all_student_absent_today_specific_class': count_all_student_absent_today_specific_class,
         'get_all_students_by_its_course': get_all_students_by_its_course,
         'get_attendance_for_all_student': get_attendance_for_all_student,
     }
