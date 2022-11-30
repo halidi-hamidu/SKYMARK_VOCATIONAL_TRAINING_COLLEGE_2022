@@ -138,6 +138,7 @@ def dashboardPage(request):
     ).order_by('-created_at')
 
     template_name = 'skymarkPages/Dashboard/dashboardPage.html'
+    for_data_tables_refresh = 'skymarkPages/Dashboard/datatables.html'
     context = {
         'today_date': today_date,
         'get_today_attendance': get_today_attendance,
@@ -158,7 +159,11 @@ def dashboardPage(request):
         'get_all_students_by_its_course': get_all_students_by_its_course,
         'get_attendance_for_all_student': get_attendance_for_all_student,
     }
-    return render(request, template_name, context)
+    if request.htmx:
+        return render(request, for_data_tables_refresh, context)
+    else:
+        return render(request, template_name, context)
+
 
 # manageClassesPage
 

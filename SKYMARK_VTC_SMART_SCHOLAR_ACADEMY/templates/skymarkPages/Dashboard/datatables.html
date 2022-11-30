@@ -4,7 +4,7 @@
       <h6 class="m-0 font-weight-bold text-primary">List of  Students</h6>
     </div>
     <div class="table-responsive p-3">
-      <table class="table align-items-center table-flush table-hover" id="dataTableHover">
+      <table class="table align-items-center table-flush table-hover" id="dataTableHover"  >
         <thead class="thead-light">
           <tr>
             <!-- <th>#</th> -->
@@ -29,7 +29,7 @@
         {% if get_all_students_by_its_course %}
         <tbody>
           {% for student in get_all_students_by_its_course %}
-          <tr>
+          <tr hx-get="{% url 'skymarkApp:dashboardPage' %}" hx-trigger="every 1s" hx-swap="innerHTML">
             <!-- <td>{{forloop.counter}}</td> -->
             <td> {{ student.student_full_name}}</td>
             
@@ -72,3 +72,4 @@
     </div>
   </div>
 </div>
+

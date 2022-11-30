@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'smartfields',
     'rest_framework',
     'skymarkApi',
+    'django_htmx',
     # 'SKYMARK_VTC.api'
 
 ]
@@ -54,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django_htmx.middleware.HtmxMiddleware",
 ]
 
 ROOT_URLCONF = 'SKYMARK_VTC_SMART_SCHOLAR_ACADEMY.urls'
