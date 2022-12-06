@@ -10,6 +10,7 @@ The third level is:
 School Management Board Member.
 
 The third level is for academic teachers.
+
 SYSTEM INTERFACE:
 
 1. lOGINPAGE
