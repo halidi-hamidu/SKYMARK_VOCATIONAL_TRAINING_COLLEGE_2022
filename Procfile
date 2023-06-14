@@ -1,1 +1,1 @@
-web: gunicorn skymarkVTC.wsgi --log-file -
+web: gunicorn skyMarkVTC.wsgi --log-file -
