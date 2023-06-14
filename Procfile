@@ -1,1 +1,1 @@
-web: gunicorn AttPortalproject.wsgi --log-file -
+web: gunicorn SKYMARK_VTC_SMART_SCHOLAR_ACADEMY.wsgi --log-file -
