@@ -1,1 +1,1 @@
-web: gunicorn SKYMARK_VTC_SMART_SCHOLAR_ACADEMY.wsgi --log-file -
+web: gunicorn skymarkVTC.wsgi --log-file -
